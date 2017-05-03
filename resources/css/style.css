@@ -109,6 +109,12 @@ span{
     position: relative;
 }
 
+ul.todo{
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
 ul.todo li{
   width: 100%;
   min-height: 50px;
@@ -186,7 +192,14 @@ ul.todo li .buttons button.complete svg:hover{
   border: solid green;
 }
 
+/*ul.todo#todo:empty:after {
+  content: 'You have nothing to-do!';
+  margin: 15px 0 0 0;
+}*/
+
 ul.todo#completed{
+  position: relative;
+  padding: 60px 0 0 0;
   opacity: 0.5;
 }
 
@@ -194,9 +207,14 @@ ul.todo#completed:not(:empty):before{
   content: '';
   width: 150px;
   height: 2px;
+  float: left;
   position: absolute;
   background: black;
   top:30px;
   left: 50%;
   margin: 0px 0px 0px -75px;
+}
+
+ul.todo#completed:empty:after {
+  content: 'You are yet to complete tasks.';
 }
